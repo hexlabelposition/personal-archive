@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ecedea;
+  --foreground: #111315;
+  --card: #e4e5e1;
+  --muted-foreground: #6b7076;
+  --border: #d3d4cf;
+  --border-subtle: #e0e1dd;
+  --primary: #56697a;
+}
+
+.dark {
+  --background: #0b0d10;
+  --foreground: #e7e9ec;
+  --card: #111419;
+  --muted-foreground: #777d86;
+  --border: #242932;
+  --border-subtle: #191d24;
+  --primary: #9bafc4;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-primary: var(--primary);
+  --font-display: var(--font-cinzel);
+  --font-sans: var(--font-archivo);
+  --font-mono: var(--font-ibm-plex-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --text-2xs: 0.625rem; /* 10px */
+  --text-hero: clamp(40px, 9.4vw, 158px);
+  --text-project-title: clamp(26px, 3.2vw, 44px);
+  --text-section-title: clamp(22px, 2.4vw, 32px);
+  --text-section-title-lg: clamp(24px, 3vw, 40px);
+  --text-about-lead: clamp(24px, 2.6vw, 34px);
+  --text-hero-description: clamp(15px, 1.5vw, 19px);
+
+  --breakpoint-3xl: 120rem; /* 1920px */
+
+  --tracking-extra-wide: 0.15em;
+  --tracking-ultra-wide: 0.2em;
+
+  --animation-delay-200: 200ms;
+  --animation-delay-250: 250ms;
+  --animation-delay-380: 380ms;
+  --animation-delay-620: 620ms;
+  --animation-delay-800: 800ms;
+
+  --animate-rise: rise 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade: fade 1s ease both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility animation-delay-* {
+  animation-delay: --value(--animation-delay-*);
+}
+
+@utility blueprint-grid {
+  background-image:
+    linear-gradient(var(--border-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+@utility container {
+  @apply mx-auto px-4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-rise,
+  .animate-fade {
+    animation: none;
+  }
 }
