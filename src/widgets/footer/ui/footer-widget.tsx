@@ -1,4 +1,5 @@
 import { site } from "@shared/config";
+import Link from "next/link";
 
 export function FooterWidget() {
   return (
@@ -8,12 +9,12 @@ export function FooterWidget() {
           {site.name}
         </span>
         <span>{site.location}</span>
-        <a
-          href={site.domainHref}
+        <Link
+          href="/"
           className="hover:text-foreground uppercase transition-colors duration-250"
         >
           {site.domain}
-        </a>
+        </Link>
         <span>LAST UPDATED {site.lastUpdated}</span>
       </div>
     </footer>

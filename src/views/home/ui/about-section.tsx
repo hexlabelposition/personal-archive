@@ -51,6 +51,8 @@ export function AboutSection() {
                 <a
                   key={contact.label}
                   href={contact.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-primary transition-colors duration-250"
                 >
                   {contact.label}
