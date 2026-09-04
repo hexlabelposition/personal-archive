@@ -37,14 +37,16 @@ export function WorkSection() {
               <span className="text-muted-foreground w-14 flex-none font-mono text-xs tracking-widest">
                 {project.id}
               </span>
+
               <span className="flex min-w-0 flex-[1_1_240px] flex-col gap-2">
-                <span className="font-display group-data-active:text-primary text-project-title leading-[1.05] font-normal tracking-wide transition-colors duration-300">
+                <span className="font-display group-data-active:text-primary text-xl leading-[1.05] font-normal tracking-wide transition-colors duration-300 lg:text-2xl">
                   {project.name}
                 </span>
                 <span className="text-muted-foreground text-sm tracking-wide text-pretty">
                   {project.descriptor}
                 </span>
               </span>
+
               <span className="text-muted-foreground tracking-extra-wide ml-auto flex min-w-0 flex-wrap items-baseline justify-end gap-x-5 gap-y-2 font-mono text-xs uppercase">
                 <span>{project.discipline}</span>
                 <span>{project.year}</span>
