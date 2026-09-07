@@ -58,6 +58,17 @@
   --animate-rise: rise 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-fade: fade 1s ease both;
 
+  /* Hero background: hairlines draw themselves in, dashed rules then crawl. */
+  --animate-draw-x: draw-x 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-draw-y: draw-y 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-drift-x:
+    draw-x 1.6s cubic-bezier(0.16, 1, 0.3, 1) both, drift-x 90s linear infinite;
+  --animate-drift-y:
+    draw-y 1.6s cubic-bezier(0.16, 1, 0.3, 1) both, drift-y 90s linear infinite;
+  --animate-orbit: orbit 200s linear infinite;
+  --animate-breathe: breathe 26s ease-in-out infinite;
+  --animate-twinkle: twinkle 48s ease-in-out infinite;
+
   @keyframes rise {
     from {
       opacity: 0;
@@ -79,6 +90,78 @@
       opacity: 1;
     }
   }
+
+  @keyframes draw-x {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes draw-y {
+    from {
+      transform: scaleY(0);
+    }
+
+    to {
+      transform: scaleY(1);
+    }
+  }
+
+  @keyframes drift-x {
+    from {
+      background-position-x: 0;
+    }
+
+    to {
+      background-position-x: 120px;
+    }
+  }
+
+  @keyframes drift-y {
+    from {
+      background-position-y: 0;
+    }
+
+    to {
+      background-position-y: 120px;
+    }
+  }
+
+  @keyframes orbit {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes breathe {
+    0%,
+    100% {
+      opacity: 0.42;
+    }
+
+    50% {
+      opacity: 0.62;
+    }
+  }
+
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0.18;
+    }
+
+    50% {
+      opacity: 0.55;
+    }
+  }
 }
 
 @utility animation-delay-* {
@@ -93,7 +176,7 @@
 }
 
 @utility container {
-  @apply mx-auto px-4;
+  @apply mx-auto px-4 md:px-6 lg:px-8;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -102,7 +185,14 @@
   }
 
   .animate-rise,
-  .animate-fade {
+  .animate-fade,
+  .animate-draw-x,
+  .animate-draw-y,
+  .animate-drift-x,
+  .animate-drift-y,
+  .animate-orbit,
+  .animate-breathe,
+  .animate-twinkle {
     animation: none;
   }
 }
