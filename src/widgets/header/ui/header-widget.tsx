@@ -1,6 +1,5 @@
 import { site } from "@shared/config";
 import { ToggleThemeButton } from "@features/toggle-theme";
-import { ArchiveIcon } from "lucide-react";
 import { navigation } from "../config/navigation";
 
 export function HeaderWidget() {
@@ -12,10 +11,19 @@ export function HeaderWidget() {
           aria-label={site.name}
           className="border-border text-muted-foreground hover:text-foreground rounded-sm border bg-transparent p-2"
         >
-          <ArchiveIcon
+          <svg
             aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
             className="size-3 transition-colors duration-250 sm:size-4"
-          />
+          >
+            <rect x="3" y="9.5" width="18" height="11.5" rx="2.6" />
+            <path d="M6 6.2h12" stroke="#9184d9" />
+            <path d="M8.5 3h7" stroke="#9184d9" />
+          </svg>
         </a>
 
         <nav className="text-muted-foreground text-2xs sm:tracking-ultra-wide flex items-center gap-2 font-sans tracking-widest uppercase sm:gap-4 sm:text-xs">
