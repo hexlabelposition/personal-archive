@@ -17,16 +17,14 @@ export function AboutSection() {
             and revised.
           </p>
           <div className="flex flex-col gap-4">
-            <p className="text-muted-foreground text-base leading-relaxed text-pretty">
-              Work spans backend services, distributed storage and messaging,
-              infrastructure, and the interfaces placed on top of them. The
-              concerns are the same at every layer: clear boundaries, observable
-              behaviour, and decisions that remain legible a year later.
+            <p className="text-muted-foreground text-base leading-relaxed text-balance">
+              My work spans backend services and user-facing interfaces. I build
+              projects to understand how data, messaging, application
+              architecture, design, and performance come together as one system.
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed text-pretty">
-              This site is maintained as an archive rather than a résumé.
-              Entries are added as systems are built, and revised as they
-              change.
+            <p className="text-muted-foreground text-base leading-relaxed text-balance">
+              This website serves as an archive. Entries are added as systems
+              are created and updated as they change.
             </p>
           </div>
         </div>
