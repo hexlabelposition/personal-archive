@@ -8,6 +8,7 @@ export type Project = {
   note: string;
   stack: string;
   link?: { href: string; label: string };
+  repository?: { href: string; label: string };
 };
 
 export const projects: readonly Project[] = [
@@ -25,6 +26,10 @@ export const projects: readonly Project[] = [
       href: "https://hexlabelposition.github.io/lumos/",
       label: "Visit website",
     },
+    repository: {
+      href: "https://github.com/hexlabelposition/lumos",
+      label: "View source",
+    },
   },
   {
     id: "VK—002",
@@ -38,6 +43,10 @@ export const projects: readonly Project[] = [
     link: {
       href: "https://delvex.dev",
       label: "Visit website",
+    },
+    repository: {
+      href: "https://github.com/hexlabelposition/delvex",
+      label: "View source",
     },
   },
   {
@@ -59,5 +68,9 @@ export const projects: readonly Project[] = [
     state: "EXPERIMENTAL",
     note: "An experimental backpack mod with a 27-slot inventory stored in the backpack item. Players can open it directly or through a key binding, and backpacks cannot be nested inside one another.",
     stack: "Java · Fabric · Minecraft",
+    repository: {
+      href: "https://github.com/hexlabelposition/harmony-backpack",
+      label: "View source",
+    },
   },
 ];

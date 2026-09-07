@@ -2,9 +2,19 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "../config/projects";
 
-export function ProjectPreview({ project }: { project: Project }) {
-  const isExternal = project.link?.href.startsWith("http");
+function GitHubIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="text-primary size-4 fill-current transition-transform duration-300 group-hover:scale-110"
+    >
+      <path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.28-1.29-5.28-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.05 0 0 .97-.31 3.16 1.18A10.98 10.98 0 0 1 12 6.12c.98 0 1.95.13 2.87.39 2.19-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.71 5.38-5.29 5.67.42.36.79 1.06.79 2.14v3.27c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z" />
+    </svg>
+  );
+}
 
+export function ProjectPreview({ project }: { project: Project }) {
   return (
     <article className="border-border bg-card relative grid overflow-hidden border">
       <div
@@ -57,8 +67,8 @@ export function ProjectPreview({ project }: { project: Project }) {
       {project.link ? (
         <Link
           href={project.link.href}
-          target={isExternal ? "_blank" : undefined}
-          rel={isExternal ? "noreferrer" : undefined}
+          target="_blank"
+          rel="noreferrer"
           className="border-border hover:bg-background focus-visible:outline-primary group flex items-center justify-between gap-4 border-t px-5 py-4 text-sm tracking-wide transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 sm:px-6"
         >
           {project.link.label}
@@ -66,6 +76,18 @@ export function ProjectPreview({ project }: { project: Project }) {
             aria-hidden="true"
             className="text-primary size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           />
+        </Link>
+      ) : null}
+
+      {project.repository ? (
+        <Link
+          href={project.repository.href}
+          target="_blank"
+          rel="noreferrer"
+          className="border-border hover:bg-background focus-visible:outline-primary group flex items-center justify-between gap-4 border-t px-5 py-4 text-sm tracking-wide transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 sm:px-6"
+        >
+          {project.repository.label}
+          <GitHubIcon />
         </Link>
       ) : null}
     </article>
