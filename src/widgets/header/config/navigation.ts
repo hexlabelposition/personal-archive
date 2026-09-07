@@ -9,7 +9,7 @@ interface NavigationItem {
 type NavigationList = NavigationItem[];
 
 export const navigation: NavigationList = [
-  { key: "index", href: "#top", label: "Index" },
+  { key: "index", href: "/", label: "Index" },
   { key: "work", href: "#work", label: "Work" },
   // { key: "lab", href: "#lab", label: "Lab" },
   // { key: "notes", href: "#notes", label: "Notes" },
