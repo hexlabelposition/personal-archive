@@ -21,7 +21,7 @@ export function WorkSection() {
       <Tabs.Root
         defaultValue={projects[0]?.id}
         orientation="vertical"
-        className="grid items-start gap-[clamp(28px,4vw,64px)] lg:grid-cols-[minmax(0,1fr)_320px]"
+        className="grid items-start gap-[clamp(28px,4vw,64px)] lg:grid-cols-[minmax(0,1fr)_480px]"
       >
         <Tabs.List
           aria-label="Selected projects"
