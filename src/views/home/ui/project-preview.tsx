@@ -69,7 +69,7 @@ export function ProjectPreview({ project }: { project: Project }) {
           href={project.link.href}
           target="_blank"
           rel="noreferrer"
-          className="border-border hover:bg-background focus-visible:outline-primary group flex items-center justify-between gap-4 border-t px-5 py-4 text-sm tracking-wide transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 sm:px-6"
+          className="border-border hover:bg-background focus-visible:outline-primary group flex items-center justify-between gap-4 border-t px-5 py-4 text-sm tracking-wide focus-visible:outline-2 focus-visible:-outline-offset-2 sm:px-6"
         >
           {project.link.label}
           <ArrowUpRight
@@ -84,7 +84,7 @@ export function ProjectPreview({ project }: { project: Project }) {
           href={project.repository.href}
           target="_blank"
           rel="noreferrer"
-          className="border-border hover:bg-background focus-visible:outline-primary group flex items-center justify-between gap-4 border-t px-5 py-4 text-sm tracking-wide transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 sm:px-6"
+          className="border-border hover:bg-background focus-visible:outline-primary group flex items-center justify-between gap-4 border-t px-5 py-4 text-sm tracking-wide focus-visible:outline-2 focus-visible:-outline-offset-2 sm:px-6"
         >
           {project.repository.label}
           <GitHubIcon />

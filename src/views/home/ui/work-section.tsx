@@ -32,14 +32,14 @@ export function WorkSection() {
             <Tabs.Tab
               key={project.id}
               value={project.id}
-              className="border-border hover:bg-card data-active:bg-card data-active:shadow-primary focus-visible:outline-primary group flex w-full cursor-pointer flex-wrap items-baseline gap-x-7 gap-y-3 border-b px-4 py-[clamp(20px,3vh,34px)] text-left transition-[background-color,color,box-shadow] duration-300 focus-visible:outline-2 focus-visible:-outline-offset-2 data-active:shadow-[inset_2px_0_0_0]"
+              className="border-border hover:bg-card data-active:bg-card data-active:shadow-primary focus-visible:outline-primary group flex w-full cursor-pointer flex-wrap items-baseline gap-x-7 gap-y-3 border-b px-4 py-[clamp(20px,3vh,34px)] text-left focus-visible:outline-2 focus-visible:-outline-offset-2 data-active:shadow-[inset_2px_0_0_0]"
             >
               <span className="text-muted-foreground w-14 flex-none font-mono text-xs tracking-widest">
                 {project.id}
               </span>
 
               <span className="flex min-w-0 flex-[1_1_240px] flex-col gap-2">
-                <span className="font-display group-data-active:text-primary text-xl leading-[1.05] font-normal tracking-wide transition-colors duration-300 lg:text-2xl">
+                <span className="font-display group-data-active:text-primary text-xl leading-[1.05] font-normal tracking-wide lg:text-2xl">
                   {project.name}
                 </span>
                 <span className="text-muted-foreground text-sm tracking-wide text-pretty">
