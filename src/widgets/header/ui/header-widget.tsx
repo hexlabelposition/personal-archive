@@ -1,5 +1,5 @@
 import { site } from "@shared/config";
-import { ToggleThemeButton } from "@features/toggle-theme";
+import { ToggleThemeMenu } from "@features/toggle-theme";
 import { navigation } from "../config/navigation";
 import { HomeLink } from "./home-link";
 
@@ -46,7 +46,7 @@ export function HeaderWidget() {
             ),
           )}
 
-          <ToggleThemeButton />
+          <ToggleThemeMenu />
         </nav>
       </div>
     </header>
