@@ -9,7 +9,9 @@ export const site = {
   domain: "hexlabelposition.dev",
   domainHref: "https://hexlabelposition.dev",
   sourceHref: "https://github.com/hexlabelposition/personal-archive",
-  lastUpdated: "2026.08",
+  launchRecordHref: "https://websitelaunches.com/site/hexlabelposition.dev",
+  established: "2026.09",
+  lastUpdated: "2026.09",
   tagline: "Systems designed, measured, and revised.",
   description:
     "An archive of systems built by Vladyslav Kudriashov — backend services, distributed storage and messaging, infrastructure, and the interfaces placed on top of them.",

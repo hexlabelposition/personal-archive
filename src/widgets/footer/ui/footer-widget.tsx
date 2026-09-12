@@ -15,7 +15,15 @@ export function FooterWidget() {
         >
           {site.domain}
         </Link>
-        <span>LAST UPDATED {site.lastUpdated}</span>
+        <a
+          href={site.launchRecordHref}
+          target="_blank"
+          rel="noreferrer"
+          title="Public launch record"
+          className="hover:text-foreground uppercase transition-colors duration-250"
+        >
+          Established {site.established}
+        </a>
       </div>
     </footer>
   );
