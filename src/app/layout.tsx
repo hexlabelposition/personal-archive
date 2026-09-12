@@ -4,6 +4,7 @@ import { site } from "@shared/config";
 import { ThemeProvider } from "@features/toggle-theme";
 import { HeaderWidget } from "@widgets/header";
 import { FooterWidget } from "@widgets/footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const title = `${site.name} — ${site.kicker}`;
@@ -67,6 +68,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
           <FooterWidget />
         </ThemeProvider>
+
+        <SpeedInsights />
       </body>
     </html>
   );
