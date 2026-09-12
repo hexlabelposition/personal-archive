@@ -8,6 +8,7 @@ export const site = {
   location: "POLAND — 2026",
   domain: "hexlabelposition.dev",
   domainHref: "https://hexlabelposition.dev",
+  sourceHref: "https://github.com/hexlabelposition/personal-archive",
   lastUpdated: "2026.08",
   tagline: "Systems designed, measured, and revised.",
   description:

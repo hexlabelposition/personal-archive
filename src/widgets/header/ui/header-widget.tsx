@@ -1,4 +1,5 @@
 import { site } from "@shared/config";
+import { GitHubIcon } from "@shared/ui";
 import { ToggleThemeMenu } from "@features/toggle-theme";
 import { navigation } from "../config/navigation";
 import { HomeLink } from "./home-link";
@@ -45,6 +46,16 @@ export function HeaderWidget() {
               </a>
             ),
           )}
+
+          <a
+            href={site.sourceHref}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View the source code of this site on GitHub"
+            className="text-muted-foreground hover:text-foreground border-border focus-visible:outline-primary flex shrink-0 items-center justify-center rounded-sm border bg-transparent p-2 focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            <GitHubIcon className="size-3 sm:size-4" />
+          </a>
 
           <ToggleThemeMenu />
         </nav>
