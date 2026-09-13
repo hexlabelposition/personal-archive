@@ -58,6 +58,10 @@ export const projects: readonly Project[] = [
     state: "PROTOTYPE",
     note: "An educational file storage system with authentication, file and folder management, uploads, downloads, and public sharing links. Five Spring Boot services use PostgreSQL for metadata, MinIO for file storage, and Kafka for events.",
     stack: "Java · Spring Boot · PostgreSQL · MinIO · Kafka",
+    repository: {
+      href: "https://github.com/Kaden09/clud",
+      label: "View source",
+    },
   },
   {
     id: "VK—004",
