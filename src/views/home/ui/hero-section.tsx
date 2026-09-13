@@ -1,7 +1,6 @@
 import { site } from "@shared/config";
 import { HeroBackground } from "./hero-background";
 import { heroIndex } from "../config/hero-index";
-import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -36,12 +35,6 @@ export function HeroSection() {
                 <span className="text-muted-foreground font-mono text-xs">
                   {site.location}
                 </span>
-                <Link
-                  href="/"
-                  className="text-muted-foreground hover:text-foreground font-mono text-xs uppercase transition-colors duration-250"
-                >
-                  {site.domain}
-                </Link>
               </div>
             </div>
 
