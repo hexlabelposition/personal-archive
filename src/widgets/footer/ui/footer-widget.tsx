@@ -1,29 +1,29 @@
 import { site } from "@shared/config";
-import Link from "next/link";
+import { colophon } from "../config/colophon";
 
 export function FooterWidget() {
   return (
-    <footer className="border-border text-muted-foreground text-2xs tracking-ultra-wide min-h-16 border-t py-4 font-mono">
-      <div className="container flex flex-wrap items-center justify-between gap-4">
-        <span className="font-display text-foreground tracking-extra-wide text-sm uppercase">
-          {site.name}
+    <footer className="border-border text-muted-foreground text-2xs tracking-ultra-wide flex min-h-16 items-center border-t py-4 font-mono leading-none">
+      <div className="container flex flex-wrap items-center gap-x-6 gap-y-3 sm:justify-between">
+        <span className="flex items-baseline gap-2">
+          <span>ESTABLISHED</span>
+          <a
+            href={site.launchRecordHref}
+            target="_blank"
+            rel="noreferrer"
+            title="Public launch record"
+            className="text-foreground hover:text-primary transition-colors duration-250"
+          >
+            {site.established}
+          </a>
         </span>
-        <span>{site.location}</span>
-        <Link
-          href="/"
-          className="hover:text-foreground uppercase transition-colors duration-250"
-        >
-          {site.domain}
-        </Link>
-        <a
-          href={site.launchRecordHref}
-          target="_blank"
-          rel="noreferrer"
-          title="Public launch record"
-          className="hover:text-foreground uppercase transition-colors duration-250"
-        >
-          Established {site.established}
-        </a>
+
+        {colophon.map((group) => (
+          <span key={group.key} className="flex items-baseline gap-2">
+            <span>{group.label}</span>
+            <span className="text-foreground">{group.items.join(" · ")}</span>
+          </span>
+        ))}
       </div>
     </footer>
   );
