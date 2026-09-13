@@ -44,8 +44,6 @@
   --text-about-lead: clamp(24px, 2.6vw, 34px);
   --text-hero-description: clamp(15px, 1.5vw, 19px);
 
-  --breakpoint-3xl: 120rem; /* 1920px */
-
   --tracking-extra-wide: 0.15em;
   --tracking-ultra-wide: 0.2em;
 
@@ -176,7 +174,7 @@
 }
 
 @utility container {
-  @apply mx-auto px-4 md:px-6 lg:px-8;
+  @apply mx-auto max-w-full px-4 md:px-6 lg:px-8;
 }
 
 @media (prefers-reduced-motion: reduce) {
