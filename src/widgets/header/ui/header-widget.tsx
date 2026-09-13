@@ -22,8 +22,8 @@ export function HeaderWidget() {
             className="size-3 transition-colors duration-250 sm:size-4"
           >
             <rect x="3" y="9.5" width="18" height="11.5" rx="2.6" />
-            <path d="M6 6.2h12" stroke="#9184d9" />
-            <path d="M8.5 3h7" stroke="#9184d9" />
+            <path d="M6 6.2h12" />
+            <path d="M8.5 3h7" />
           </svg>
         </HomeLink>
 
